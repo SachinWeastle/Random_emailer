@@ -1,0 +1,29 @@
+<div style="text-align: center;">
+
+{{#userexists}}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Sl.No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#userlist}}
+    <tr>
+      <th scope="row">{{slno}}</th>
+      <td>{{username}}</td>
+      <td>{{email}}</td>
+      <td>{{datesent}}</td>
+    </tr>
+    {{/userlist}}
+  </tbody>
+</table>
+{{/userexists}}
+{{^userexists}}
+    <h3>No record found</h3>
+{{/userexists}}
+
+</div>
